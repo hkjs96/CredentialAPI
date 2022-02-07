@@ -19,11 +19,11 @@ public class InfoService {
         }
 
         final String id = infoEntity.getId();
-        if(infoRepository.existsById(id)) {
+        /*if(infoRepository.existsById(id)) {
             log.warn("id already exists {}", id);
             infoRepository.save(infoEntity);
             throw new RuntimeException("id already exists and update hash");
-        }
+        }*/
 
         return infoRepository.save(infoEntity);
     }
